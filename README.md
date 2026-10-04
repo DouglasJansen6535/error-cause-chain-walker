@@ -32,3 +32,10 @@ The trade-off is that the walk stops at the first non-Error `cause`. ES2022 allo
 - Cyclic cause chains are detected and do not cause an infinite loop.
 - If an error's `stack` is missing or not a string, that entry omits the `stack` property entirely.
 - Passing a non-error value returns an empty array.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
