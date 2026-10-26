@@ -1,6 +1,6 @@
 {
   "name": "error-cause-chain-walker",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Follows the ES2022 cause property through nested errors, collecting each message, name, and stack into an ordered array for top-level reporting.",
   "type": "module",
   "main": "src/index.js",
